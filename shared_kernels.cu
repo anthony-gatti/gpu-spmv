@@ -1,4 +1,3 @@
-#include "shared_kernels.cuh"
 #include <stdio.h>
 
 __global__ void csr_spmv_kernel_shared(int *row_ptr, int *col_ind, double *values, double *x, double *y, int num_rows) {

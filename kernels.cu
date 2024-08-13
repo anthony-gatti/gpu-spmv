@@ -1,5 +1,3 @@
-#include "kernels.cuh"
-
 __global__ void csr_spmv_kernel(int *row_ptr, int *col_ind, double *values, double *x, double *y, int num_rows) {
     int row = blockIdx.x * blockDim.x + threadIdx.x;
     if (row < num_rows) {

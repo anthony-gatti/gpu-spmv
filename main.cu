@@ -1,7 +1,5 @@
 #include <cuda_runtime.h>
 #include <iostream>
-#include "kernels.cuh"
-#include "shared_kernels.cuh"
 
 // CUDA kernel declarations
 __global__ void csr_spmv_kernel(int *row_ptr, int *col_ind, double *values, double *x, double *y, int num_rows);
