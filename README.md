@@ -61,7 +61,7 @@ The project involves converting HIP code for SpMV into CUDA and implementing the
 - **Row Major ELLPACK Achieved Bandwidth:** 5.74 GB/s
 - **Column Major ELLPACK Achieved Bandwidth:** 5.87 GB/s
 
-### Bandwidth Analysis of Results
+### FLOP Analysis of Results
 #### Without Shared Memory
 - **CSR Achieved FLOPs:** 84.38 GFLOPs
 - **Row Major ELLPACK Achieved FLOPs:** 58.27 GFLOPs
