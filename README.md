@@ -50,40 +50,24 @@ The project involves converting HIP code for SpMV into CUDA and implementing the
 - **50% Bandwidth:** 96.0 Gflops
 - **Peak Bandwidth:** 192.0 Gflops
 
-### Results
-#### Without Shared Memory
-- **CSR Execution Time:** 0.667904 ms
-- **Row Major ELLPACK Execution Time:** 0.967031 ms
-- **Column Major ELLPACK Execution Time:** 0.551673 ms
-
-#### With Shared Memory
-- **CSR Execution Time:** 66.0662 ms
-- **Row Major ELLPACK Execution Time:** 77.7513 ms
-- **Column Major ELLPACK Execution Time:** 76.1583 ms
-
-### Bandwidth Analysis
-- **50% Bandwidth:** 587.347 µs
-- **Peak Bandwidth:** 293.67 µs
-
-### FLOP Analysis
-- **50% Bandwidth:** 96.0 Gflops
-- **Peak Bandwidth:** 192.0 Gflops
-
-### Results
+### Bandwidth Analysis of Results
 #### Without Shared Memory
 - **CSR Achieved Bandwidth:** 674.57 GB/s
 - **Row Major ELLPACK Achieved Bandwidth:** 465.97 GB/s
 - **Column Major ELLPACK Achieved Bandwidth:** 816.64 GB/s
-
-- **CSR Achieved FLOPs:** 84.38 GFLOPs
-- **Row Major ELLPACK Achieved FLOPs:** 58.27 GFLOPs
-- **Column Major ELLPACK Achieved FLOPs:** 102.13 GFLOPs
 
 #### With Shared Memory
 - **CSR Achieved Bandwidth:** 6.76 GB/s
 - **Row Major ELLPACK Achieved Bandwidth:** 5.74 GB/s
 - **Column Major ELLPACK Achieved Bandwidth:** 5.87 GB/s
 
+### Bandwidth Analysis of Results
+#### Without Shared Memory
+- **CSR Achieved FLOPs:** 84.38 GFLOPs
+- **Row Major ELLPACK Achieved FLOPs:** 58.27 GFLOPs
+- **Column Major ELLPACK Achieved FLOPs:** 102.13 GFLOPs
+
+#### With Shared Memory
 - **CSR Achieved FLOPs:** 0.85 GFLOPs
 - **Row Major ELLPACK Achieved FLOPs:** 0.72 GFLOPs
 - **Column Major ELLPACK Achieved FLOPs:** 0.74 GFLOPs
