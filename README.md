@@ -69,51 +69,24 @@ The project involves converting HIP code for SpMV into CUDA and implementing the
 - **50% Bandwidth:** 96.0 Gflops
 - **Peak Bandwidth:** 192.0 Gflops
 
-### Bandwidth Analysis of Results
+### Results
 #### Without Shared Memory
-- **CSR:**
-  - **Execution Time:** 0.667904 ms
-  - **Achieved Bandwidth:** \( \frac{28,192,672 \times 8 \times 2}{0.667904 \times 10^6} \approx 674.57 \) GB/s
-- **Row Major ELLPACK:**
-  - **Execution Time:** 0.967031 ms
-  - **Achieved Bandwidth:** \( \frac{28,192,672 \times 8 \times 2}{0.967031 \times 10^6} \approx 465.97 \) GB/s
-- **Column Major ELLPACK:**
-  - **Execution Time:** 0.551673 ms
-  - **Achieved Bandwidth:** \( \frac{28,192,672 \times 8 \times 2}{0.551673 \times 10^6} \approx 816.64 \) GB/s
+- **CSR Achieved Bandwidth:** 674.57 GB/s
+- **Row Major ELLPACK Achieved Bandwidth:** 465.97 GB/s
+- **Column Major ELLPACK Achieved Bandwidth:** 816.64 GB/s
+
+- **CSR Achieved FLOPs:** 84.38 GFLOPs
+- **Row Major ELLPACK Achieved FLOPs:** 58.27 GFLOPs
+- **Column Major ELLPACK Achieved FLOPs:** 102.13 GFLOPs
 
 #### With Shared Memory
-- **CSR:**
-  - **Execution Time:** 66.0662 ms
-  - **Achieved Bandwidth:** \( \frac{28,192,672 \times 8 \times 2}{66.0662 \times 10^6} \approx 6.76 \) GB/s
-- **Row Major ELLPACK:**
-  - **Execution Time:** 77.7513 ms
-  - **Achieved Bandwidth:** \( \frac{28,192,672 \times 8 \times 2}{77.7513 \times 10^6} \approx 5.74 \) GB/s
-- **Column Major ELLPACK:**
-  - **Execution Time:** 76.1583 ms
-  - **Achieved Bandwidth:** \( \frac{28,192,672 \times 8 \times 2}{76.1583 \times 10^6} \approx 5.87 \) GB/s
+- **CSR Achieved Bandwidth:** 6.76 GB/s
+- **Row Major ELLPACK Achieved Bandwidth:** 5.74 GB/s
+- **Column Major ELLPACK Achieved Bandwidth:** 5.87 GB/s
 
-### FLOP Analysis of Results
-#### Without Shared Memory
-- **CSR:**
-  - **Execution Time:** 0.667904 ms
-  - **Achieved FLOPs:** \( \frac{28,192,672 \times 2}{0.667904 \times 10^6} \approx 84.38 \) GFLOPs
-- **Row Major ELLPACK:**
-  - **Execution Time:** 0.967031 ms
-  - **Achieved FLOPs:** \( \frac{28,192,672 \times 2}{0.967031 \times 10^6} \approx 58.27 \) GFLOPs
-- **Column Major ELLPACK:**
-  - **Execution Time:** 0.551673 ms
-  - **Achieved FLOPs:** \( \frac{28,192,672 \times 2}{0.551673 \times 10^6} \approx 102.13 \) GFLOPs
-
-#### With Shared Memory
-- **CSR:**
-  - **Execution Time:** 66.0662 ms
-  - **Achieved FLOPs:** \( \frac{28,192,672 \times 2}{66.0662 \times 10^6} \approx 0.85 \) GFLOPs
-- **Row Major ELLPACK:**
-  - **Execution Time:** 77.7513 ms
-  - **Achieved FLOPs:** \( \frac{28,192,672 \times 2}{77.7513 \times 10^6} \approx 0.72 \) GFLOPs
-- **Column Major ELLPACK:**
-  - **Execution Time:** 76.1583 ms
-  - **Achieved FLOPs:** \( \frac{28,192,672 \times 2}{76.1583 \times 10^6} \approx 0.74 \) GFLOPs
+- **CSR Achieved FLOPs:** 0.85 GFLOPs
+- **Row Major ELLPACK Achieved FLOPs:** 0.72 GFLOPs
+- **Column Major ELLPACK Achieved FLOPs:** 0.74 GFLOPs
 
 ## Shared Memory Optimization
 Shared memory is used to reduce global memory accesses by loading frequently accessed data into fast, low-latency memory. However, due to limited shared memory size (6144 double precision elements), memory tiling is employed to process data in tiles. Despite these efforts, shared memory implementations showed significant slowdowns compared to non-shared memory versions.
