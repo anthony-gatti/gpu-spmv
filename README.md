@@ -81,7 +81,7 @@ Shared memory is used to reduce global memory accesses by loading frequently acc
 2. **Clone the Repository:**
    ```bash
    git clone <gpu-spmv>
-   cd <gpu-spmv>
+   cd gpu-spmv
    ```
 3. **Compile the Code**
    ```bash
