@@ -77,7 +77,7 @@ Shared memory is used to reduce global memory accesses by loading frequently acc
 
 ## How to Run the Code
 1. **Download a Testing Matrix**
-   Go to https://sparse.tamu.edu/ and download a matrix to use in the code.
+   Go to [SuiteSparse Matrix Collection](https://sparse.tamu.edu/) and download a matrix to use in the code.
 2. **Clone the Repository:**
    ```bash
    git clone <gpu-spmv>
@@ -85,7 +85,7 @@ Shared memory is used to reduce global memory accesses by loading frequently acc
    ```
 3. **Compile the Code**
    ```bash
-   nvcc -o spmv main.cu kernels.cu read_mtx.cu
+   nvcc -o spmv main.cu kernels.cu shared_kernels.cu read_mtx.cu
    ```
 4. **Run the Program**
    ```bash
