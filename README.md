@@ -3,6 +3,23 @@
 ## Overview
 This project implements Sparse Matrix-Vector Multiplication (SpMV) using CUDA, leveraging the power of GPU acceleration. The primary goal is to compare the performance of different storage formats: Compressed Sparse Row (CSR), ELLPACK Row-Major, and ELLPACK Column-Major, and to analyze the impact of optimization techniques such as shared memory.
 
+## Results at a glance
+
+<figure>
+  <img src="results_data.png" alt="Average SpMV kernel execution time (ms) across matrices; CSR vs ELLPACK row-major (RM) vs ELLPACK column-major (CM)" width="720">
+  <figcaption><sub><em>Average execution time by matrix (increasing NNZ order). Formats compared: CSR (blue), ELLPACK RM (magenta), ELLPACK CM (green).</em></sub></figcaption>
+</figure>
+
+<figure>
+  <img src="results_graph.png" alt="Matrix stats (rows, columns, NNZ) for the benchmark suite" width="720">
+  <figcaption><sub><em>Benchmark suite summary: matrix dimensions and NNZ.</em></sub></figcaption>
+</figure>
+
+**Highlights**
+- **CSR** is the lowest-latency format across most matrices in this suite.
+- **ELLPACK RM** degrades on larger/irregular matrices due to padding and poor memory efficiency.
+- **ELLPACK CM** narrows the gap on some cases but still trails CSR as NNZ grows.
+
 ## Objectives
 - Implement SpMV using CUDA.
 - Compare performance across different storage formats (CSR, ELLPACK Row-Major, ELLPACK Column-Major).
